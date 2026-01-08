@@ -405,7 +405,7 @@ export default function Home() {
 
               <p>
                 <span className="font-bold negrita">GARANTE:</span> YO <span className="font-bold negrita">{formData.nombreGarante || '____________________'}</span>  con
-                cedula número <span className="font-bold negrita">{formData.cedulaGarante || '____________________'}</span> como persona que garantizo la adquisición de los articulos o motos, me comprometo a que se pague en su totalidad el monto de la deuda obtenida en <strong>{formData.nombreNegocio}</strong>, y en caso de no dar cumplimiento, me comprometo a hacerme cargo de pagar personalmente todo el saldo faltante ó devolver al <strong>{formData.nombreNegocio}</strong> el articulo sin reclamo alguno de los valores que esten cancelados, igualmente me someto a todas las clausulas de este pagaré.
+                cedula número <span className="font-bold negrita">{formData.cedulaGarante || '____________________'}</span> como persona que garantizo la adquisición de los articulos o motos, me comprometo a que se pague en su totalidad el monto de la deuda obtenida en <strong>{formData.nombreNegocio}</strong>, y en caso de no dar cumplimiento, me comprometo a hacerme cargo de pagar personalmente todo el saldo faltante ó devolver al <strong>{formData.nombreNegocio}</strong> el articulo sin reclamo alguno de los valores que esten cancelados por la devaluación de los articulos obtenidos, igualmente me someto a todas las clausulas de este pagaré.
               </p>
 
               <p>
