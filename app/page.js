@@ -376,6 +376,10 @@ export default function Home() {
               </p>
 
               <p>
+                <span className="font-bold negrita">GARANTE:</span> Yo como persona que garantizo la adquisición de los articulos o motos, me comprometo a que se pague en su totalidad el monto de la deuda obtenida en {formData.nombreNegocio}, y en caso de no dar cumplimiento, me comprometo a hacerme cargo de pagar personalmente todo el saldo faltante ó devolver al {formData.nombreNegocio} el articulo sin reclamo alguno de los valores que esten cancelados, igualmente me someto a todas las clausulas de este pagaré.
+              </p>
+
+              <p>
                 <span className="font-bold negrita">NOTA:</span> Las garantías de los productos que se venden en <strong>{formData.nombreNegocio}</strong>,
                 dan únicamente los servicios técnicos de las Marcas autorizadas, dejando en claro que el
                 almacén únicamente realiza las ventas de los mismos.
@@ -396,7 +400,13 @@ export default function Home() {
                 <div className="border-t-2 border-black w-48 mb-2"></div>
                 <p className="text-sm" style={{ margin: '0px 0px' }}>{formData.nombreDeudor}</p>
                 <p className="text-sm" style={{ margin: '0px 0px' }}>CI: {formData.cedulaDeudor}</p>
-                <p className="text-sm" style={{ margin: '0px 0px' }}>Comprador</p>
+                <p className="text-sm" style={{ margin: '0px 0px' }}>COMPRADOR</p>
+              </div>
+               <div className="text-center">
+                <div className="border-t-2 border-black w-48 mb-2"></div>
+                <p className="text-sm" style={{ margin: '0px 0px' }}>Yo:___________________________</p>
+                <p className="text-sm" style={{ margin: '0px 0px' }}>CI: ___________________________</p>
+                <p className="text-sm" style={{ margin: '0px 0px' }}>GARANTE</p>
               </div>
             </div>
           </div>
