@@ -386,7 +386,7 @@ export default function Home() {
               </p>
 
               <p>
-                {formData.canton}, {formData.fechaEmision}
+                <strong>{formData.canton}, {formData.fechaEmision}</strong>
               </p>
 
             </div>
