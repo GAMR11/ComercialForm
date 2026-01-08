@@ -22,6 +22,8 @@ export default function Home() {
     marca: '',
     modelo: '',
     color: '',
+    nombreGarante : '',
+    cedulaGarante : '',
   });
 
   // useEffect se ejecuta cuando el componente se carga
@@ -296,6 +298,32 @@ export default function Home() {
                   className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
               </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">
+                  Nombre del Garante
+                </label>
+                <input
+                  type="text"
+                  name="nombreGarante"
+                  value={formData.nombreGarante}
+                  onChange={handleChange}
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+              </div>
+
+               <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">
+                  Cedula del Garante
+                </label>
+                <input
+                  type="text"
+                  name="cedulaGarante"
+                  value={formData.cedulaGarante}
+                  onChange={handleChange}
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+              </div>
             </div>
           </div>
       </div>
@@ -376,7 +404,8 @@ export default function Home() {
               </p>
 
               <p>
-                <span className="font-bold negrita">GARANTE:</span> Yo como persona que garantizo la adquisición de los articulos o motos, me comprometo a que se pague en su totalidad el monto de la deuda obtenida en {formData.nombreNegocio}, y en caso de no dar cumplimiento, me comprometo a hacerme cargo de pagar personalmente todo el saldo faltante ó devolver al {formData.nombreNegocio} el articulo sin reclamo alguno de los valores que esten cancelados, igualmente me someto a todas las clausulas de este pagaré.
+                <span className="font-bold negrita">GARANTE:</span> YO <span className="font-bold negrita">{formData.nombreGarante || '____________________'}</span>  con
+                cedula número <span className="font-bold negrita">{formData.cedulaGarante || '____________________'}</span> como persona que garantizo la adquisición de los articulos o motos, me comprometo a que se pague en su totalidad el monto de la deuda obtenida en <strong>{formData.nombreNegocio}</strong>, y en caso de no dar cumplimiento, me comprometo a hacerme cargo de pagar personalmente todo el saldo faltante ó devolver al <strong>{formData.nombreNegocio}</strong> el articulo sin reclamo alguno de los valores que esten cancelados, igualmente me someto a todas las clausulas de este pagaré.
               </p>
 
               <p>
@@ -404,8 +433,8 @@ export default function Home() {
               </div>
                <div className="text-center">
                 <div className="border-t-2 border-black w-48 mb-2"></div>
-                <p className="text-sm" style={{ margin: '0px 0px' }}>Yo:___________________________</p>
-                <p className="text-sm" style={{ margin: '0px 0px' }}>CI: ___________________________</p>
+                <p className="text-sm" style={{ margin: '0px 0px' }}>{formData.nombreGarante}</p>
+                <p className="text-sm" style={{ margin: '0px 0px' }}>CI: {formData.cedulaGarante}</p>
                 <p className="text-sm" style={{ margin: '0px 0px' }}>GARANTE</p>
               </div>
             </div>
