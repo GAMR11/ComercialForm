@@ -1,26 +1,69 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Estilos para la marca de agua */
+/* Estilos para la marca de agua - CORREGIDO */
+.watermark {
+  transform: rotate(0deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 50%;
+  margin-left:7em;
+  margin-top:11em;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.negrita {
+  font-weight: 700;
 }
+/* Estilos para impresión */
+@media print {
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+   /* Remover encabezados y pies de página del navegador */
+  @page {
+    margin: 0;
+    size: auto;
   }
-}
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+
+  body {
+    margin: 0;
+    padding: 20px;
+  }
+
+  /* Ocultar el formulario y botones al imprimir */
+  body > div > div > div:first-child,
+  body > div > div > div:last-child {
+    display: none !important;
+  }
+
+  /* Mostrar solo el pagaré */
+  #pagare-preview {
+    box-shadow: none !important;
+    margin: 0 !important;
+    padding: 20px !important;
+  }
+
+  /* Evitar saltos de página */
+  #pagare-preview {
+    page-break-inside: avoid;
+  }
+
+  /* Asegurar que solo se imprima una página */
+  html, body {
+    height: auto !important;
+    overflow: visible !important;
+  }
+
+  /* Asegurar que la marca de agua se imprima */
+  .watermark {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
 }
