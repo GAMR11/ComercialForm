@@ -2,68 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Estilos para la marca de agua */
-/* Estilos para la marca de agua - CORREGIDO */
-.watermark {
-  transform: rotate(0deg);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 50%;
-  height: 50%;
-  margin-left:7em;
-  margin-top:11em;
-  -webkit-transform: rotate(0deg);
-  -moz-transform: rotate(0deg);
-  -ms-transform: rotate(0deg);
-  -o-transform: rotate(0deg);
-}
-
-.negrita {
-  font-weight: 700;
-}
-/* Estilos para impresión */
-@media print {
-
-   /* Remover encabezados y pies de página del navegador */
-  @page {
-    margin: 0;
-    size: auto;
-  }
-
-
-  body {
-    margin: 0;
-    padding: 20px;
-  }
-
-  /* Ocultar el formulario y botones al imprimir */
-  body > div > div > div:first-child,
-  body > div > div > div:last-child {
-    display: none !important;
-  }
-
-  /* Mostrar solo el pagaré */
-  #pagare-preview {
-    box-shadow: none !important;
-    margin: 0 !important;
-    padding: 20px !important;
-  }
-
-  /* Evitar saltos de página */
-  #pagare-preview {
-    page-break-inside: avoid;
-  }
-
-  /* Asegurar que solo se imprima una página */
-  html, body {
-    height: auto !important;
-    overflow: visible !important;
-  }
-
-  /* Asegurar que la marca de agua se imprima */
-  .watermark {
-    print-color-adjust: exact;
-    -webkit-print-color-adjust: exact;
-  }
+/* Aplicar Calibri globalmente */
+body {
+  font-family: 'Calibri', 'Arial', sans-serif;
 }
